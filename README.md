@@ -11,7 +11,7 @@ There are probably mathematical or algorithmic approaches to proving/finding suc
 
 In this project:
   1) I will first attempt to accurately build my own version of 2048
-  2) Then, I plan to simulate a variety patterns on generated boards to see how they perform
+  2) Then, I plan to simulate a variety of self-selected patterns on generated boards to see how they perform
   3) Finally, I'll collect some (hopefully) thought-provoking statistics based on the results
 
 The goals of this project are:
