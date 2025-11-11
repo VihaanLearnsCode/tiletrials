@@ -23,7 +23,7 @@ Finally, I enjoy casual coding and the process of building things, so I hope to 
 
 # Results
 
-I will update my findings here and, if it is done, on my personal [website]([https://github.com/VihaanLearnsCode/VihaanLearnsCode.github.io](https://vihaanlearnscode.github.io/)).
+I will update my findings here and, if it is done, on my personal [website](https://vihaanlearnscode.github.io/).
 
 # Acknowledgements:
 This project, by its nature, draws heavy inspiration from Gabriele Cirulli, the creator of the popular [2048](https://github.com/gabrielecirulli/2048).
