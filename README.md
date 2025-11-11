@@ -19,6 +19,9 @@ There are probably mathematical or algorithmic approaches to proving/finding suc
   2) To tackle any math/coding-related subproblems I come across while creating my version of the game
   3) To try my hand at small-scale, informal independent research (define, hypothesize, test, collect)
 
+# Results
+
+I will update my findings here and, if it is done, on my personal [website](https://github.com/VihaanLearnsCode/VihaanLearnsCode.github.io).
 Finally, I enjoy casual coding and the process of building things, so I hope to have fun!
 
 # Acknowledgements:
