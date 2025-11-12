@@ -9,5 +9,4 @@ def generate():
     board = init_board()
     spawn_tile(board)
     spawn_tile(board)
-    print(board)
     return board 

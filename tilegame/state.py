@@ -19,14 +19,11 @@ def update_board(board, move) -> bool:
         board = np.rot90(board)
     elif move == 'D':
         board = np.rot90(np.rot90(board))
-
-    board = spawn_tile(board)
     return board 
 
 def try_move(board, move):
-    new_board = update_board(board, move)
+    new_board = update_board(board.copy(), move)
     valid_move = (board.tolist() != new_board.tolist())
-
     return (valid_move, new_board)
 
 def check_end(board):
@@ -46,7 +43,7 @@ def spawn_tile(board):
     return board #returns same board if no space available
 
 def validSequence(moves: str):
-    return set(moves) not in ('W', 'A', 'S', 'D') or len(moves) > 10
+    return set(moves).issubset({'W', 'A', 'S', 'D'}) and len(moves) <= 10
 
 def compressLeft(row):
     compressed = [x for x in row if x != 0]
