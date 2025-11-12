@@ -20,6 +20,7 @@ def update_board(board, move) -> bool:
     elif move == 'D':
         board = np.rot90(np.rot90(board))
 
+    board = spawn_tile(board)
     return board 
 
 def try_move(board, move):
