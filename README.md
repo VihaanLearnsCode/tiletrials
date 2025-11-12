@@ -24,21 +24,16 @@ Finally, I enjoy casual coding and the process of building things, so I hope to 
 # Results
 Here are the results for 10000 games for the pattern "ASDSASDSDS":
 
-0
-1000
-2000
-3000
-4000
-5000
-6000
-7000
-8000
-9000
 32 : 18
+
 64 : 319
+
 128 : 2599
+
 256 : 5429
+
 512 : 1628
+
 1024 : 7
 
 Almost there!!
