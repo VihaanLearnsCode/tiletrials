@@ -1,46 +1,37 @@
 import numpy as np
 
 def update_board(board, move) -> bool:
+    print(board)
     #decide transform based on move
-    if move == 'A':
+    if move == 'W':
         board = np.rot90(board)
     elif move == 'S':
-        board = np.rot90(np.rot90(board))
-    elif move == 'D':
         board = np.rot90(board, k=-1)
+    elif move == 'D':
+        board = np.rot90(np.rot90(board))
 
-    #moves up
-    for row in range(1, 4):
-        for col in range(4):
-            
-            #merges
-            if board[row][col] == board[row - 1][col]:
-                board[row - 1][col] = board[row][col] * 2
-                board[row][col] = 0
+    print(board)
+    for i in range(4):
+        board[i] = mergeLeft(board[i])
 
-            #compresses up
-            if board[row - 1][col] == 0:
-                board[row - 1][col] = board[row][col]
-                board[row][col] = 0
-            
-            
-
-
+    print(board)
     #transforms back into original
-    if move == 'A':
+    if move == 'W':
         board = np.rot90(board, k=-1)
     elif move == 'S':
-        board = np.rot90(np.rot90(board))
-    elif move == 'D':
         board = np.rot90(board)
+    elif move == 'D':
+        board = np.rot90(np.rot90(board))
 
-    return board #no change or change?
+    return board 
 
 def try_move(board, move):
-    return (True, board)
+    new_board = update_board(board, move)
+    valid_move = (board == new_board)
+    return (valid_move, new_board)
 
 def check_end(board):
-    return not (try_move('W') or try_move('W') or try_move('W') or try_move('W')) 
+    return not (try_move('W')[0] or try_move('S')[0] or try_move('A')[0] or try_move('D')[0]) 
 
 def spawn_tile(board):
     i = 0
@@ -57,3 +48,20 @@ def spawn_tile(board):
 
 def validSequence(moves: str):
     return set(moves) not in ('W', 'A', 'S', 'D') or len(moves) > 10
+
+def compressLeft(row):
+    compressed = [x for x in row if x != 0]
+    while(len(compressed) < 4):
+        compressed.append(0)
+    compressed = np.array(compressed)
+    return compressed
+
+def mergeLeft(row):
+    row = compressLeft(row.copy())
+    for i in range(3):
+        if row[i] == row[i + 1] and row[i] != 0:
+            row[i] *= 2
+            row[i + 1] = 0
+            row = compressLeft(row)
+            i += 1
+    return row
