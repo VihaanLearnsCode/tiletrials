@@ -22,8 +22,29 @@ There probably exist robust mathematical or algorithmic approaches to proving/fi
 Finally, I enjoy casual coding and the process of building things, so I hope to have a lot of fun!
 
 # Results
+Here are the results for 10000 games for the pattern "ASDSASDSDS":
 
-I will update my findings here and, if it is done, on my personal [website](https://vihaanlearnscode.github.io/).
+0
+1000
+2000
+3000
+4000
+5000
+6000
+7000
+8000
+9000
+32 : 18
+64 : 319
+128 : 2599
+256 : 5429
+512 : 1628
+1024 : 7
+
+Almost there!!
+
+
+I will update my more findings here and, if it is done, on my personal [website](https://vihaanlearnscode.github.io/).
 
 # Acknowledgements:
 This project, by its nature, draws heavy inspiration from Gabriele Cirulli, the creator of the popular [2048](https://github.com/gabrielecirulli/2048).
