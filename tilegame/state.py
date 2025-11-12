@@ -1,7 +1,6 @@
 import numpy as np
 
 def update_board(board, move) -> bool:
-    print(board)
     #decide transform based on move
     if move == 'W':
         board = np.rot90(board)
@@ -10,11 +9,9 @@ def update_board(board, move) -> bool:
     elif move == 'D':
         board = np.rot90(np.rot90(board))
 
-    print(board)
     for i in range(4):
         board[i] = mergeLeft(board[i])
 
-    print(board)
     #transforms back into original
     if move == 'W':
         board = np.rot90(board, k=-1)
@@ -27,11 +24,12 @@ def update_board(board, move) -> bool:
 
 def try_move(board, move):
     new_board = update_board(board, move)
-    valid_move = (board == new_board)
+    valid_move = (board.tolist() != new_board.tolist())
+
     return (valid_move, new_board)
 
 def check_end(board):
-    return not (try_move('W')[0] or try_move('S')[0] or try_move('A')[0] or try_move('D')[0]) 
+    return not (try_move(board, 'W')[0] or try_move(board, 'S')[0] or try_move(board, 'A')[0] or try_move(board, 'D')[0]) 
 
 def spawn_tile(board):
     i = 0
