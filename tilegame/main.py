@@ -1,7 +1,12 @@
 from .state import update_board, check_end, validSequence, spawn_tile
 from .create import generate
 from .stats import maxTile, statistics
+import numpy as np
 
+def least_used(s):
+    chars = ["W", "A", "S", "D"]
+    counts = {c: s.count(c) for c in chars}
+    return min(counts, key=counts.get)
 
 def simulate(moves: str):
     
@@ -15,9 +20,12 @@ def simulate(moves: str):
     if not validSequence(moves):
         return moves, best_tile, best_coods, board, 2
     
+    least = least_used(moves) 
     done = 0
     flag = 2
-    while(i < 2000): #loop until 2048 is found or 1000 moves have been played or 'game over'
+    length = len(moves)
+
+    while(i < 2000): #loop until 2048 is found or 10000 moves have been played or 'game over'
         for move in moves:
             best_tile, best_coods = maxTile(board)
             if check_end(board):
@@ -41,7 +49,7 @@ def simulate(moves: str):
     # print(board)
     # print("---------------------------")
     # print(" ")
-    return moves, best_tile, best_coods, board, flag
+    return num_moves, best_tile, best_coods, board, flag
 
 def main(moves):
     result = simulate(moves) #result = (moves, best_tile, best_coods, board, flag)
