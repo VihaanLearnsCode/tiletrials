@@ -21,8 +21,18 @@ There probably exist robust mathematical or algorithmic approaches to proving/fi
 
 Finally, I enjoy casual coding and the process of building things, so I hope to have a lot of fun!
 
+# Testing Methods and Logical Guessing
+I ran 10000 randomly generated games for each guessed sequence. For the sequence, I allowed upto 2000 repeats, as I noticed the average number of moves to complete a game were usually below 1000. Hence, at the upper bound, I am running 20 million moves.
+
+Putting a limit on the sequence also adds complexity to each guess. For example, if my sequence is "SD", to snake-weight towards the bottom-right corner, and I then try "ASD", to move left every so often, to avoid stuck boards, then I should also notice that A will be performed at the same rate as S or D, as in, 33% of the time, which is not snake-weighting anymore.
+
+With the 10 character limit, I have the space to have A only perform 10% of the time ("ASDSDSDSDS"), which is closer to what I want, but still contains an A to shake things up and maybe save a stuck board from a game over and wasting moves. 
+
+At one point, I thought of adding logic to help a game get unstuck. In fact, I did. For example, if a game is not over, but the sequence does not contain/ is not at a viable move, then it would play a random one. However, that defeats the purpose of the experiment of building a sequence that I think can beat the game, so I removed it.
+
 # Results
-Here are the results for 10000 games for the pattern "ASDS":
+Here are the plotted results for 10000 games for the pattern "ASDS":
+/images/Distribution_ASDS.png
 
 Time taken = 4 minutes 57 seconds
 Average number of moves = 311
@@ -41,11 +51,9 @@ Best Tile / Frequency
 
 1024 : 24       
 
+Almost there!! The aim to would be to push the dark plotted band further up, so that we get closer to 2048.
 
-Almost there!!
-
-
-I will update my more findings here and, if it is done, on my personal [website](https://vihaanlearnscode.github.io/).
+I will update more findings here and, if it is done, on my personal [website](https://vihaanlearnscode.github.io/).
 
 # Acknowledgements:
 This project, by its nature, draws heavy inspiration from Gabriele Cirulli, the creator of the popular [2048](https://github.com/gabrielecirulli/2048).
