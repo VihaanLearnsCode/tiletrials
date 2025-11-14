@@ -36,6 +36,7 @@ Here are the plotted results for 10000 games for the pattern "ASDS":
 ![Results](images/Distribution_ASDS.png)
 
 Time taken = 4 minutes 57 seconds
+
 Average number of moves = 311
 
 Best Tile / Frequency    
