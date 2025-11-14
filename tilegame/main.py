@@ -6,7 +6,7 @@ from .stats import maxTile, statistics
 def simulate(moves: str):
     
     board = generate()
-    print(board)
+    # print(board)
 
     i = 0
     best_tile = 0
@@ -36,11 +36,11 @@ def simulate(moves: str):
             break
 
     num_moves = i*len(moves)
-    print(" ")
-    print(f"number of moves = {num_moves}")
-    print(board)
-    print("---------------------------")
-    print(" ")
+    # print(" ")
+    # print(f"number of moves = {num_moves}")
+    # print(board)
+    # print("---------------------------")
+    # print(" ")
     return moves, best_tile, best_coods, board, flag
 
 def main(moves):
