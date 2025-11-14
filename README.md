@@ -28,12 +28,18 @@ Time taken = 4 minutes 57 seconds
 Average number of moves = 311
 
 Best Tile / Frequency    
-**32               9
-**64               193
-128               1698
-256               5277
-512               2799
-1024               24       
+
+32               9
+
+64               193
+
+128              1698
+
+256              5277
+
+512              2799
+
+1024             24       
 
 
 Almost there!!
