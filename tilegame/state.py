@@ -54,10 +54,12 @@ def compressLeft(row):
 
 def mergeLeft(row):
     row = compressLeft(row.copy())
-    for i in range(3):
-        if row[i] == row[i + 1] and row[i] != 0:
+    i = 0
+    while i < len(row) - 1:
+        if row[i] != 0 and row[i] == row[i + 1]:
             row[i] *= 2
             row[i + 1] = 0
-            row = compressLeft(row)
+            i += 2
+        else:
             i += 1
-    return row
+    return compressLeft(row) 

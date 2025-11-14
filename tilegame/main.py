@@ -37,18 +37,11 @@ def simulate(moves: str):
                 flag = 0
             board = update_board(board, move)
             board = spawn_tile(board)
-            # print(" ")
-            # print(f"{board} after move {move}")
         i += 1
         if done:
             break
 
     num_moves = i*len(moves)
-    # print(" ")
-    # print(f"number of moves = {num_moves}")
-    # print(board)
-    # print("---------------------------")
-    # print(" ")
     return num_moves, best_tile, best_coods, board, flag
 
 def main(moves):

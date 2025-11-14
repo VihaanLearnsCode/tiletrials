@@ -5,7 +5,7 @@ import math
 import matplotlib.pyplot as plt
 import numpy as np
 
-moves = "ASDS"
+moves = "SASDSA"
 tile_nums = []
 result_list = []
 threshold = 0
@@ -19,13 +19,13 @@ for i in range(1, n + 1):
     result = simulate(moves) #result = (num_moves, best_tile, best_coods, board, flag)
     result_list.append(result[1])
     avg_num_moves += result[0]
-    if result[1] == 8:
-        print(" ")
-        print("------------------------------------")
-        print(f"|  Bad Board in Game {i}:")
-        print("------------------------------------")
-        print(result[3])
-        print(" ")
+    # if result[1] == 8:
+    #     print(" ")
+    #     print("------------------------------------")
+    #     print(f"|  Bad Board in Game {i}:")
+    #     print("------------------------------------")
+    #     print(result[3])
+    #     print(" ")
     if result[1] > threshold:
         print(" ")
         print("------------------------------------")
@@ -42,6 +42,10 @@ taken = end - start
 minutes = math.floor(taken / 60)
 seconds = math.floor(taken % 60)
 avg_num_moves = math.ceil(avg_num_moves / n)
+
+print("------------------------------------")
+print(f"| Move sequence used: {moves}")
+print("------------------------------------")
 
 print("------------------------------------")
 print(f"| Time taken = {minutes} minutes {seconds} seconds")
