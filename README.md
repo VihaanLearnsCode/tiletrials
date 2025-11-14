@@ -24,7 +24,7 @@ Finally, I enjoy casual coding and the process of building things, so I hope to 
 The parts below this detail how I used the completed simulator.
 
 # Testing Methods and Logical Guessing
-I ran 10000 randomly generated games for each guessed sequence. For the sequence, I allowed upto 2000 repeats, as I noticed the average number of moves to complete a game were usually below 1000. Hence, at the upper bound, I am running 20 million moves.
+I ran 10000 randomly generated games for each guessed sequence. For the sequence, I allowed upto 2000 repeats, as I noticed the average number of moves to complete a game were usually below 1000. Hence, even though I allow for an upper bound of 20 million moves, I am running 2-6 million moves due to most games hitting "Game Over" early.
 
 Putting a limit on the sequence also adds complexity to each guess. For example, if my sequence is "SD", to snake-weight towards the bottom-right corner, and I then try "ASD", to move left every so often, to avoid stuck boards, then I should also notice that A will be performed at the same rate as S or D, as in, 33% of the time, which is not snake-weighting anymore.
 
