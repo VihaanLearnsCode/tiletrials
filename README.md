@@ -32,7 +32,8 @@ At one point, I thought of adding logic to help a game get unstuck. In fact, I d
 
 # Results
 Here are the plotted results for 10000 games for the pattern "ASDS":
-/images/Distribution_ASDS.png
+
+![Results](images/Distribution_ASDS.png)
 
 Time taken = 4 minutes 57 seconds
 Average number of moves = 311
