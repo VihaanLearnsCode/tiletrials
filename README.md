@@ -21,6 +21,8 @@ There probably exist robust mathematical or algorithmic approaches to proving/fi
 
 Finally, I enjoy casual coding and the process of building things, so I hope to have a lot of fun!
 
+The parts below this detail how I used the completed simulator.
+
 # Testing Methods and Logical Guessing
 I ran 10000 randomly generated games for each guessed sequence. For the sequence, I allowed upto 2000 repeats, as I noticed the average number of moves to complete a game were usually below 1000. Hence, at the upper bound, I am running 20 million moves.
 
