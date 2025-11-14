@@ -22,19 +22,27 @@ There probably exist robust mathematical or algorithmic approaches to proving/fi
 Finally, I enjoy casual coding and the process of building things, so I hope to have a lot of fun!
 
 # Results
-Here are the results for 10000 games for the pattern "ASDSASDSDS":
+Here are the results for 10000 games for the pattern "ASDS":
 
-32 : 18
-
-64 : 319
-
-128 : 2599
-
-256 : 5429
-
-512 : 1628
-
-1024 : 7
+------------------------------------
+| Time taken = 4 minutes 57 seconds
+------------------------------------
+ 
+------------------------------------
+| Average number of moves = 311
+------------------------------------
+ 
+------------------------------------
+|    Best Tile   :    Frequency    
+|                                  
+|       32               9
+|       64               193
+|       128               1698
+|       256               5277
+|       512               2799
+|       1024               24
+|                                  
+------------------------------------
 
 Almost there!!
 
