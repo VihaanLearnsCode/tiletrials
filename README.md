@@ -30,7 +30,9 @@ Putting a limit on the sequence also adds complexity to each guess. For example,
 
 With the 10 character limit, I have the space to have A only perform 10% of the time ("ASDSDSDSDS"), which is closer to what I want, but still contains an A to shake things up and maybe save a stuck board from a game over and wasting moves. 
 
-At one point, I thought of adding logic to help a game get unstuck. In fact, I did. For example, if a game is not over, but the sequence does not contain/ is not at a viable move, then it would play a random one. However, that defeats the purpose of the experiment of building a sequence that I think can beat the game, so I removed it.
+I tried to see whether repeating patterns within my input itself would lead to anything, eg. "ASDSASDSD", 
+
+At one point, I thought of adding special logic to help a game get unstuck. In fact, I did. For example, if a game is not over, but the sequence does not contain/ is not at a viable move, then it would play a random one. However, that defeats the purpose of the experiment of building a sequence that I think can beat the game, so I removed it. Thus, if I am using only A,S and D, and notice, through printing, that my games are getting stuck, I can add in a W, which would run ,at minimum, 10% of the time.
 
 # Results
 Here are the plotted results for 10000 games for the pattern "ASDS":
@@ -55,9 +57,10 @@ Best Tile / Frequency
 
 1024 : 24       
 
-Almost there!! The aim to would be to push the dark plotted band further up, so that we get closer to 2048.
+# Discussion
+Almost there!! The aim to would be to push the dark plotted band further up, so that we get closer to a 2048. Moreover, these results show that if you just repeat "ASDS" in a game of 2048, you have a ~53% chance of hitting at least one 256, and a ~28% chance of reaching a single 512. Perhaps, one can use that to reach a decent board quickly and then play slower with other strategies. Most other patterns I tried so far had their dark bands between 128 and 256, while this goes one level higher. The patterns "ASDSASDS{D/S}{D/S}" also perform similarly.
 
-I will update more findings here and, if it is done, on my personal [website](https://vihaanlearnscode.github.io/).
+I will update more findings here, especially if I reach an elusive 2048, and, if it is done, on my personal [website](https://vihaanlearnscode.github.io/).
 
 # Acknowledgements:
 This project, by its nature, draws heavy inspiration from Gabriele Cirulli, the creator of the popular [2048](https://github.com/gabrielecirulli/2048).
