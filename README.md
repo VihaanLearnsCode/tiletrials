@@ -21,25 +21,46 @@ There probably exist robust mathematical or algorithmic approaches to proving/fi
 
 Finally, I enjoy casual coding and the process of building things, so I hope to have a lot of fun!
 
+The parts below this detail how I used the completed simulator.
+
+# Testing Methods and Logical Guessing
+I ran 10000 randomly generated games for each guessed sequence. For the sequence, I allowed upto 2000 repeats, as I noticed the average number of moves to complete a game were usually below 1000. Hence, even though I allow for an upper bound of 20 million moves, I am running 2-6 million moves due to most games hitting "Game Over" early.
+
+Putting a limit on the sequence also adds complexity to each guess. For example, if my sequence is "SD", to snake-weight towards the bottom-right corner, and I then try "ASD", to move left every so often, to avoid stuck boards, then I should also notice that A will be performed at the same rate as S or D, as in, ~33% of the time, which is not snake-weighting anymore.
+
+With the 10 character limit, I have the space to have A only perform 10% of the time ("ASDSDSDSDS"), which is closer to what I want, but still contains an A to shake things up and maybe save a stuck board from a game over and wasting moves. 
+
+I tried to see whether repeating patterns within my input itself would lead to anything, eg. "ASDSASDSD", 
+
+At one point, I thought of adding special logic to help a game get unstuck. In fact, I did. For example, if a game is not over, but the sequence does not contain/ is not at a viable move, then it would play a random one. However, that defeats the purpose of the experiment of building a sequence that I think can beat the game, so I removed it. Thus, if I am using only A,S and D, and notice, through printing, that my games are getting stuck, I can add in a W, which would run ,at minimum, 10% of the time.
+
 # Results
-Here are the results for 10000 games for the pattern "ASDSASDSDS":
+Here are the plotted results for 10000 games for the pattern "ASDS":
 
-32 : 18
+![Results](images/Distribution_ASDS.png)
 
-64 : 319
+Time taken = 4 minutes 57 seconds
 
-128 : 2599
+Average number of moves = 311
 
-256 : 5429
+Best Tile / Frequency    
 
-512 : 1628
+32  : 9
 
-1024 : 7
+64  : 193
 
-Almost there!!
+128 : 1698
 
+256 : 5277
 
-I will update my more findings here and, if it is done, on my personal [website](https://vihaanlearnscode.github.io/).
+512 : 2799
+
+1024 : 24       
+
+# Discussion
+Almost there!! The aim to would be to push the dark plotted band further up, so that we get closer to a 2048. Moreover, these results show that if you just repeat "ASDS" in a game of 2048, you have a ~53% chance of hitting at least one 256, and a ~28% chance of reaching a single 512. Perhaps, one can use that to reach a decent board quickly and then play slower with other strategies. Most other patterns I tried so far had their dark bands between 128 and 256, while this goes one level higher. The patterns "ASDSASDS{D/S}{D/S}" also perform similarly.
+
+I will update more findings here, especially if I reach an elusive 2048. If it is done, this project should be accessible from my personal [website](https://vihaanlearnscode.github.io/) as well.
 
 # Acknowledgements:
 This project, by its nature, draws heavy inspiration from Gabriele Cirulli, the creator of the popular [2048](https://github.com/gabrielecirulli/2048).
