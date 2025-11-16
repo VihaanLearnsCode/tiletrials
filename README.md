@@ -60,6 +60,15 @@ Best Tile / Frequency
 # Discussion
 Almost there!! The aim to would be to push the dark plotted band further up, so that we get closer to a 2048. Moreover, these results show that if you just repeat "ASDS" in a game of 2048, you have a ~53% chance of hitting at least one 256, and a ~28% chance of reaching a single 512. Perhaps, one can use that to reach a decent board quickly and then play slower with other strategies. Most other patterns I tried so far had their dark bands between 128 and 256, while this goes one level higher. The patterns "ASDSASDS{D/S}{D/S}" also perform similarly.
 
+# Updates {read rest first}
+  1) Added a tester to try every string permutation of length n - ideally NEEDS GPU for large trials for n > 4
+  2) Can input custom move limit and custom board (just for initial state, spawned tiles after are still random)
+
+# Future Work
+  1) Add a feature that can set a spawn seed for more accurate testing
+  2) Add better plots - the current line plots can be confusing
+  3) Add a frontend for users ??
+     
 I will update more findings here, especially if I reach an elusive 2048. If it is done, this project should be accessible from my personal [website](https://vihaanlearnscode.github.io/) as well.
 
 # Acknowledgements:
