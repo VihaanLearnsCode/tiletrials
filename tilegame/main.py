@@ -8,9 +8,12 @@ def least_used(s):
     counts = {c: s.count(c) for c in chars}
     return min(counts, key=counts.get)
 
-def simulate(moves: str):
+def simulate(moves: str, submit_board, submit_limit):
     
+
     board = generate()
+    if submit_board.size != 0:
+        board = submit_board
     # print(board)
 
     i = 0
@@ -25,7 +28,12 @@ def simulate(moves: str):
     flag = 2
     length = len(moves)
 
-    while(i < 2000): #loop until 2048 is found or 10000 moves have been played or 'game over'
+    if submit_limit == -1:
+        limit = 1000
+    else:
+        limit = submit_limit
+
+    while(i < limit): #loop until 2048 is found or 'limit' moves have been played or 'game over'
         for move in moves:
             best_tile, best_coods = maxTile(board)
             if check_end(board):

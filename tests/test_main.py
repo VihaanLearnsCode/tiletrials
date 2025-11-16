@@ -5,18 +5,18 @@ import math
 import matplotlib.pyplot as plt
 import numpy as np
 
-moves = "SASDSA"
+moves = "SADWSAWSDA"
 tile_nums = []
 result_list = []
 threshold = 0
-n = 10000
+n = 100
 start = time.time()
 
 avg_num_moves = 0
 for i in range(1, n + 1):
     if i % 1000 == 0:
         print(i)
-    result = simulate(moves) #result = (num_moves, best_tile, best_coods, board, flag)
+    result = simulate(moves, np.array([]), -1) #result = (num_moves, best_tile, best_coods, board, flag)
     result_list.append(result[1])
     avg_num_moves += result[0]
     # if result[1] == 8:
@@ -62,11 +62,12 @@ highest = max(tile_nums)
 
 print(" ")
 print("------------------------------------")
-print("|    Best Tile   :    Frequency    ")
+print("|    Best Tile   :    Frequency (%)   ")
 print("|                                  ")
 freq_dict = dict(sorted(freq_dict.items()))
 for key in freq_dict:
-    print(f"|       {key}               {freq_dict[key]}")
+    percent = (freq_dict[key] / n) * 100
+    print(f"|       {key}               {freq_dict[key]}   ({percent:.2f}%)")
 print("|                                  ")
 print("------------------------------------")
 
