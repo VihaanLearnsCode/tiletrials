@@ -9,10 +9,10 @@ import itertools
 seqs = [''.join(p) for p in itertools.product(['W', 'A', 'S', 'D'], repeat=4)]
 n = 1
 limit = 2000
-board = np.array([[2, 0, 0, 2], 
+board = np.array([[0, 0, 2, 0], 
                   [0, 0, 0, 0],
                   [0, 0, 0, 0],
-                  [0, 0, 0, 0]])
+                  [0, 2, 0, 0]])
 
 print(f"| {len(seqs)} sequences will be tested for {n} games each ( = { (n * len(seqs))} games)")
 

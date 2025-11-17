@@ -29,6 +29,18 @@ def try_move(board, move):
 def check_end(board):
     return not (try_move(board, 'W')[0] or try_move(board, 'S')[0] or try_move(board, 'A')[0] or try_move(board, 'D')[0]) 
 
+def valid_moves(board):
+    valids = []
+    for move in ['W', 'A', 'S', 'D']:
+        valid, _ = try_move(board, move)
+        if valid:
+            valids.append(move)
+            
+    if len(valids) == 0:
+        return ['Z']
+    
+    return valids
+
 def spawn_tile(board):
     i = 0
     vals = [2, 4]
