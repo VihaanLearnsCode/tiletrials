@@ -83,8 +83,10 @@ I will update more findings here, especially if I reach an elusive 2048. If it i
 
 ### Motivation
   I wanted to replication how I play the game. Whenever I make a move, I think of the maximum tile I can create next, without giving much thought to the consequences it will have to the rest of the board.
-  I have made two agents so far. The first one motivated by pure maximization. Choose the next move that scores the best tile.
-  The second adds some thought. What if multiple moves allow for maximizing my next highest tile, but I select the one that also keeps the sum of the board low? I call this my 'naive minimax approach'.
+  I have made three agents so far. 
+  The first one motivated by pure tile maximization. Choose the next move that scores the largest tile value.
+  The second one motivated by overall board score maximization. Choose the next move that scores the maximum board score.
+  The third adds some thought. What if multiple moves allow for maximizing my next highest tile, but I select the one that also keeps the sum of the board low? I call this my 'naive minimax approach'.
 
 ### Results
   I ran both agents over 10000 random games. These agents are not deterministic due to tie-breaking best move choices using randomness. The games anyways are not due to random tile spawning.
