@@ -48,6 +48,6 @@ print(f"| Board Tested:")
 print(board)
 print(f"| Best sequence used: {best_seq}")
 percent = (best_seq_count / n) * 100
-print(f"| Best tile found: {best_tile} {best_seq_count} in {n} games ({percent}%)")
+print(f"| Best tile found: {best_tile} , {best_seq_count} in {n} games ({percent}%)")
 print("------------------------------------")
 

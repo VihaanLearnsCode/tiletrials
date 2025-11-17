@@ -77,7 +77,19 @@ I will update more findings here, especially if I reach an elusive 2048. If it i
 
 ## Project 2: Optimal Sequence Finder
   Building off my first project, I now flip the script. Given a single initial board, which repeatable string of length n will solve it the best?
+  For n = 4, this runs all strings from WWWW to SSSS in {W, A, S, D}, which is 256 strings.
+  Note: There will always be some unfairness due to how new tiles are spawned - but hey, that's life, I guess.
   Here are the results for a random board, where n = 4:
+
+  Board Tested:
+  [[0 0 2 0]
+  [0 0 0 0]
+  [0 0 0 0]
+  [0 2 0 0]]
+  Best sequence used: WAWD
+  Best tile found: 512 , 1 in 1 games (100.0%)
+
+  There is more I think I can do here, such as involving actual algorithms or rudimentary AI, or even inferring performance patterns based on the results. Hence I have made it its own project.
 
 ## Project 3: Algorithmic Agents
 
@@ -139,9 +151,22 @@ Best Tile   :    Frequency (%)
 
 512     :      293   (2.93%)    
 
-# Next Steps
-Starting with the same board, I will pit different agents against each other to see which one wins more. 
+# Battle
+Starting with the same board, I pit two different agents against each other to see which one wins more. 
+Here is the output for 1000 games between maximizing the board's sum, vs maximizing the maximum tile:
+(Remember, based on the results above, they have almost the same performance)
 
+Board Generated!
+500
+1000
+Agent Maxboard finished playing
+500
+1000
+Agent Maxtile finished playing
+...
+Agent Maxtile wins by 28 points!
+
+I will make more statistics on this soon to showcase more differences. I will also give each agent a "Weighted Rating" before having them battle. Will the one with the better rating win, or will it go to the underdog?
   
 # Acknowledgements:
 These projects, by their nature, draws heavy inspiration from Gabriele Cirulli, the creator of the popular [2048](https://github.com/gabrielecirulli/2048).
