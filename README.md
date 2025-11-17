@@ -1,6 +1,6 @@
 # tiletrials
 
-A collection of 2048 related projects.
+A collection of 2048 related projects. Just for fun!
 At the core of the projects lies my implementation of a 2048 tile game WASD simulator.
 - Project 1: Repeatable Sequence Tester
 - Project 2: Optimal Sequence Finder
