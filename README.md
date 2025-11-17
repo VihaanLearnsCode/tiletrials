@@ -2,11 +2,22 @@
 
 A collection of 2048 related projects. Just for fun!
 
+WHY 2048? I have never actually got 2048 in a real game yet, and I haven't actually played too many rounds myself. However, while trying it out, I thought it was a simple enough game that I could try a lot of different things with it.
+
 At the core of these projects lies my implementation of a 2048 tile game WASD simulator.
-- Project 0: 2048 Board Simulator
+- Project 0: 2048 Board Simulator Implementation 
 - Project 1: Repeatable Sequence Tester
 - Project 2: Optimal Sequence Finder
 - Project 3: Algorithmic Agents
+
+## Project 0: 2048 Board Simulator Implementation
+I just played the game and tried to implement what I saw. Later, when I was done, I checked official forums and sites for actual metrics like "At what distribution are 2s spawned as opposed to 4s?" etc.
+
+I used a simple merge left approach. Basically, I transpose my board to face left, regardless of which move is played. Then, I perform board compression and tile merging. Finally, I transpose back and spawn new tiles. I did so using the NumPy library to vectorize computations. Some optimizations don't have huge effects due the board just being a 4x4 grid, but once I started running games in sets of 10000 for some tests, I did try to speed up performance with some tweaks.
+
+Overall, it was a cool experience to recreate this fun game. Right now, it is basically the backend of how this game would look - to act as a simulator for the below tests. Later, I could add a frontend to visualize simulations. 
+
+Anyways, on to the actual projects.
 
 ## Project 1: Repeatable Sequence Tester
 
