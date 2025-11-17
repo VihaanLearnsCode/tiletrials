@@ -1,6 +1,9 @@
 # tiletrials
-A 2048 tile game WASD simulator. 
-This project will generate a 4x4 NumPy representation of the 2048 game, to be used in simulations to find a simple way to win.
+
+A collection of 2048 related projects.
+At the core of the projects lies my implementation of a 2048 tile game WASD simulator.
+
+# Project 1: Repeatable Sequence Tester
 
 # Motivation
 
@@ -62,16 +65,45 @@ Almost there!! The aim to would be to push the dark plotted band further up, so 
 
 I will update more findings here, especially if I reach an elusive 2048. If it is done, this project should be accessible from my personal [website](https://vihaanlearnscode.github.io/) as well.
 
-# Updates {read rest first}
-  1) Added a tester to try every string permutation of length n - ideally NEEDS GPU for large trials for n > 4
-  2) Can input custom move limit and custom board (just for initial state, spawned tiles after are still random)
-
 # Future Work
   1) Add a feature that can set a spawn seed for more accurate testing
   2) Add better plots - the current line plots can be confusing
   3) Add a frontend for users ??
 
+# Project 2: Full Sequence Solver
+  Building off my first project, I now flip the script. Given a single initial board, which repeatable string of length n will solve it the best?
+  Here are the results for a random board:
+
+# Project 3: Algorithmic Agents
+
+# Motivation
+  I wanted to replication how I play the game. Whenever I make a move, I think of the maximum tile I can create next, without giving much thought to the consequences it will have to the rest of the board.
+  I have made two agents so far. The first one motivated by pure maximization. Choose the next move that scores the best tile.
+  The second adds some thought. What if multiple moves allow for maximizing my next highest tile, but I select the one that also keeps the sum of the board low? I call this my 'naive minimax approach'.
+
+  # Results
+  I ran both agents over 10000 random games. These agents are not deterministic due to tie-breaking best move choices using randomness. The games anyways are not due to random tile spawning.
+
+  Results for pure maximization:
+  
+  Best Tile   :    Frequency (%)   
+  
+  16               13   (0.13%)
+  
+  32               210   (2.10%)
+  
+  64               1129   (11.29%)
+  
+  128               3857   (38.57%)
+  
+  256               4532   (45.32%)
+  
+  512               259   (2.59%)
+
+  Results for naive minimaxing:
+
+  
 # Acknowledgements:
-This project, by its nature, draws heavy inspiration from Gabriele Cirulli, the creator of the popular [2048](https://github.com/gabrielecirulli/2048).
+These projects, by their nature, draws heavy inspiration from Gabriele Cirulli, the creator of the popular [2048](https://github.com/gabrielecirulli/2048).
 However, in the spirit of learning from this endeavor, I never looked at the linked code myself, and so my implementation will differ.
 
