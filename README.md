@@ -137,7 +137,10 @@ Best Tile   :    Frequency (%)
 
 256     :      4640   (46.40%)
 
-512     :      293   (2.93%)                     
+512     :      293   (2.93%)    
+
+# Next Steps
+Starting with the same board, I will pit different agents against each other to see which one wins more. 
 
   
 # Acknowledgements:
