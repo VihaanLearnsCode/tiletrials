@@ -97,11 +97,12 @@ I will update more findings here, especially if I reach an elusive 2048. If it i
 ## Project 3: Algorithmic Agents
 
 ### Motivation
-  I wanted to replication how I play the game. Whenever I make a move, I think of the maximum tile I can create next, without giving much thought to the consequences it will have to the rest of the board.
+  I wanted to replicate how I play the game. Whenever I make a move, I think of the maximum tile I can create next, without giving much thought to the consequences it will have to the rest of the board. So I just put some of the thoughts I have into playing and made functions that replicate my different objective functions. 
+  
   I have made three agents so far. 
-  The first one motivated by pure tile maximization. Choose the next move that scores the largest tile value.
-  The second one motivated by overall board score maximization. Choose the next move that scores the maximum board score.
-  The third adds some thought. What if multiple moves allow for maximizing my next highest tile, but I select the one that also keeps the sum of the board low? This is my naive
+    The first one motivated by pure tile maximization. Choose the next move that scores the largest tile value.
+    The second one motivated by overall board score maximization. Choose the next move that scores the maximum board score. In real life, I just estimate this, but here the math is accurate.
+    The third adds some thought. What if multiple moves allow for maximizing my next highest tile, but I select the one that also keeps the sum of the board low? This is my naive
   'minsum-maxtile' approach.
 
 ### Results
