@@ -2,6 +2,9 @@
 
 A collection of 2048 related projects.
 At the core of the projects lies my implementation of a 2048 tile game WASD simulator.
+Project 1: Repeatable Sequence Tester
+Project 2: Optimal Sequence Finder
+Project 3: Algorithmic Agents
 
 # Project 1: Repeatable Sequence Tester
 
@@ -70,9 +73,9 @@ I will update more findings here, especially if I reach an elusive 2048. If it i
   2) Add better plots - the current line plots can be confusing
   3) Add a frontend for users ??
 
-# Project 2: Full Sequence Solver
+# Project 2: Optimal Sequence Finder
   Building off my first project, I now flip the script. Given a single initial board, which repeatable string of length n will solve it the best?
-  Here are the results for a random board:
+  Here are the results for a random board, where n = 4:
 
 # Project 3: Algorithmic Agents
 
