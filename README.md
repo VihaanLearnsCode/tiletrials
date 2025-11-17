@@ -172,13 +172,13 @@ Here is the output for 1000 games between maximizing the board's sum, vs maximiz
 (Remember, based on the results above, they have almost the same performance)
 
 Board Generated!
-500
-1000
+
 Agent Maxboard finished playing
-500
-1000
+
 Agent Maxtile finished playing
+
 ...
+
 Agent Maxtile wins by 28 points!
 
 I will make more statistics on this soon to showcase more differences. I will also give each agent a "Weighted Rating" before having them battle. Will the one with the better rating win, or will it go to the underdog?
