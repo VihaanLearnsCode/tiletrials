@@ -89,9 +89,10 @@ I will update more findings here, especially if I reach an elusive 2048. If it i
   The third adds some thought. What if multiple moves allow for maximizing my next highest tile, but I select the one that also keeps the sum of the board low? I call this my 'naive minimax approach'.
 
 ### Results
-  I ran both agents over 10000 random games. These agents are not deterministic due to tie-breaking best move choices using randomness. The games anyways are not due to random tile spawning.
-
-  Results for pure maximization:
+  I ran all three agents over 10000 random games. These agents are not deterministic due to tie-breaking best move choices using randomness. The games anyways are not due to random tile spawning.
+  Results for Agent 1: pure tile maximization:
+  
+  Results for Agent 2: pure board maximization:
   
   Best Tile   :    Frequency (%)   
   
@@ -107,7 +108,7 @@ I will update more findings here, especially if I reach an elusive 2048. If it i
   
   512               259   (2.59%)
 
-  Results for naive minimaxing:
+  Results for Agent 3: naive minimaxing:
 
   
 # Acknowledgements:
