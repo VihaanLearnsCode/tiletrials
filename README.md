@@ -96,17 +96,17 @@ I will update more findings here, especially if I reach an elusive 2048. If it i
   
   Best Tile   :    Frequency (%)   
   
-  16               13   (0.13%)
+  16       :       13   (0.13%)
   
-  32               210   (2.10%)
+  32       :       210   (2.10%)
   
-  64               1129   (11.29%)
+  64       :       1129   (11.29%)
   
-  128               3857   (38.57%)
+  128      :       3857   (38.57%)
   
-  256               4532   (45.32%)
+  256      :       4532   (45.32%)
   
-  512               259   (2.59%)
+  512      :       259   (2.59%)
 
   Results for Agent 3: naive minimaxing:
 
