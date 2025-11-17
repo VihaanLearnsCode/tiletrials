@@ -82,11 +82,14 @@ I will update more findings here, especially if I reach an elusive 2048. If it i
   Here are the results for a random board, where n = 4:
 
   Board Tested:
+  
   [[0 0 2 0]
   [0 0 0 0]
   [0 0 0 0]
   [0 2 0 0]]
+  
   Best sequence used: WAWD
+  
   Best tile found: 512 , 1 in 1 games (100.0%)
 
   There is more I think I can do here, such as involving actual algorithms or rudimentary AI, or even inferring performance patterns based on the results. Hence I have made it its own project.
