@@ -92,14 +92,28 @@ I will update more findings here, especially if I reach an elusive 2048. If it i
 ### Results
   I ran all three agents over 10000 random games. These agents are not deterministic due to tie-breaking best move choices using randomness. The games anyways are not due to random tile spawning.
   Results for Agent 1: pure tile maximization:
+
+Best Tile   :    Frequency (%)   
+                            
+16       :       8     (0.08%)
+
+32       :       180   (1.80%)
+
+64       :       1102  (11.02%)
+
+128      :       3838  (38.38%)
+
+256      :       4620  (46.20%)
+
+512      :       252   (2.52%)                               
   
   Results for Agent 2: pure board maximization:
   
   Best Tile   :    Frequency (%)   
   
-  16       :       13   (0.13%)
+  16       :       13     (0.13%)
   
-  32       :       210   (2.10%)
+  32       :       210    (2.10%)
   
   64       :       1129   (11.29%)
   
@@ -107,7 +121,7 @@ I will update more findings here, especially if I reach an elusive 2048. If it i
   
   256      :       4532   (45.32%)
   
-  512      :       259   (2.59%)
+  512      :       259    (2.59%)
 
   Results for Agent 3: naive  'minsum-maxtile' :
 
