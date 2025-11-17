@@ -125,6 +125,20 @@ Best Tile   :    Frequency (%)
 
   Results for Agent 3: naive  'minsum-maxtile' :
 
+Best Tile   :    Frequency (%)   
+
+16               6   (0.06%)
+
+32               150   (1.50%)
+
+64               1122   (11.22%)
+
+128               3939   (39.39%)
+
+256               4525   (45.25%)
+
+512               258   (2.58%)                             
+
   
 # Acknowledgements:
 These projects, by their nature, draws heavy inspiration from Gabriele Cirulli, the creator of the popular [2048](https://github.com/gabrielecirulli/2048).
